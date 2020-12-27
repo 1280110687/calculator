@@ -3,7 +3,7 @@
     <h1>XM's calculator</h1>
     <div class="calculator">
       <div class="result" style="grid-area: result">
-        {{equation}}
+        <span>{{equation}}</span>
       </div>
 
       <button style="grid-area: ac" @click="clear">AC</button>
@@ -188,5 +188,19 @@ export default {
   font-family: Helvetica;
   padding: 0 20px;
   color: #666;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.result span {
+  display: inline-block;
+  height: 100%;
+}
+
+.result::-webkit-scrollbar {
+  display: none;
 }
 </style>
