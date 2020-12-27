@@ -1,5 +1,6 @@
 <template>
   <div class="calculator">
+    <h1>XM's calculator</h1>
     <div class="result" style="grid-area: result">
       {{equation}}
     </div>
